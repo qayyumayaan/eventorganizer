@@ -37,7 +37,7 @@ public class EventOrganizer {
                     scanner.close();
                     return;
                 }
-                default -> System.out.println(command + "is an invalid command!");
+                default -> System.out.println(command + " is an invalid command!");
             }
         }
     }
