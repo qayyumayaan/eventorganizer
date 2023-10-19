@@ -66,4 +66,9 @@ public class EventCalendar {
         }
         print();
     }
+
+    public void printByCampus() {
+    }
+    public void printByDepartment() {
+    }
 }
