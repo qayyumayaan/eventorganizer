@@ -79,5 +79,7 @@ public class Event implements Comparable<Event>{
         return this.contact;
     }
 
+    public String getEndTime() { return this.startTime.getEnd(duration); }
+
 
 }
