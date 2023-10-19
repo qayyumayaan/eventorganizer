@@ -34,4 +34,10 @@ public class EventCalendar {
 
     public boolean contains(Event event) { return find(event) != NOT_FOUND;}
 
+    public boolean add(Event event) {
+        if (contains(event)) return false;
+        if (numEvents == events.length) grow();
+        events[numEvents++] = event;
+        return true;
+    }
 }
