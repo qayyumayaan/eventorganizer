@@ -78,4 +78,29 @@ public class EventOrganizer {
             System.out.println("The event is already on the calendar.");
         }
     }
+
+    /**
+     * Handles command R.
+     * @author Ayaan Qayyum
+     */
+    public void caseRemove() {
+        if(params.length != 4) return;
+
+        String dateString = params[1];
+        String startTimeString = params[2].toUpperCase();
+        String locationString = params[3].toUpperCase();
+
+        if (!dateIsValid(dateString)) return;
+        if (!startTimeIsValid(startTimeString)) return;
+        if (!locationIsValid(locationString)) return;
+
+
+        Event event = new Event(date, startTime, location);
+        if (eventCalendar.remove(event)) {
+            System.out.println("Event has been removed from the calendar!");
+        } else {
+            System.out.println("Cannot remove; event is not in the calendar!");
+        }
+
+    }
 }
