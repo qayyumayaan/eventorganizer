@@ -18,6 +18,12 @@ public class Event implements Comparable<Event>{
         this.duration = duration;
     }
 
+    public Event(Date date, Timeslot startTime, Location location) {
+        this.date = date;
+        this.startTime = startTime;
+        this.location = location;
+    }
+
     @Override
     public boolean equals(Object obj) {
         if (this == obj) return true;
