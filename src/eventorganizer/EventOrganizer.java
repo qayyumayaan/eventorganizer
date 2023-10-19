@@ -202,4 +202,14 @@ public class EventOrganizer {
         System.out.println("* end of event calendar *");
     }
 
+    private void casePrintByDate() {
+        if (params.length != 1) return;
+        if (eventCalendar.getNumEvents() == 0) {
+            System.out.println("Event calendar is empty!");
+            return;
+        }
+        System.out.println("* Event calendar by event date and start time *");
+        eventCalendar.printByDate();
+        System.out.println("* end of event calendar *");
+    }
 }
