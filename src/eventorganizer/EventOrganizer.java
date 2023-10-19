@@ -103,4 +103,14 @@ public class EventOrganizer {
         }
 
     }
+
+    private boolean dateChecker(String dateString) {
+        int count = 0;
+        for (char c : dateString.toCharArray()) {
+            if (c == '/') {
+                count++;
+            }
+        }
+        return count == 2;
+    }
 }
