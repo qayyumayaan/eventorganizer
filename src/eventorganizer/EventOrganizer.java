@@ -191,4 +191,15 @@ public class EventOrganizer {
 
 
 
+    private void casePrint() {
+        if (params.length != 1) return;
+        if (eventCalendar.getNumEvents() == 0) {
+            System.out.println("Event calendar is empty!");
+            return;
+        }
+        System.out.println("* Event calendar *");
+        eventCalendar.print();
+        System.out.println("* end of event calendar *");
+    }
+
 }
