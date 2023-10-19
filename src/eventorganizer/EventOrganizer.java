@@ -142,4 +142,15 @@ public class EventOrganizer {
             return false;
         }
     }
+
+    private boolean startTimeIsValid(String startTimeString) {
+        try {
+            startTime = Timeslot.valueOf(startTimeString);
+            return true;
+        } catch (IllegalArgumentException e) {
+            System.out.println("Invalid time slot!");
+            return false;
+        }
+    }
+
 }
