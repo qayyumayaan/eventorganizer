@@ -117,7 +117,7 @@ public class EventOrganizer {
     private boolean dateIsValid(String dateString) {
 
         try {
-            if (dateChecker(dateString)) {
+            if (!dateChecker(dateString)) {
                 System.out.println(date + ": Invalid calendar date!");
                 return false;
             }
