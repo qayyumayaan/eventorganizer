@@ -71,9 +71,8 @@ public class Date implements Comparable<Date>{
      * @author Ayaan Qayyum
      */
     public boolean isValid() {
-        int currentYear = Calendar.getInstance().get(Calendar.YEAR);
-        if (month <= 0 || month > MONTHS_IN_YEAR || day <= 0 ||
-                currentYear < year) return false;
+//        int currentYear = Calendar.getInstance().get(Calendar.YEAR);
+        if (month <= 0 || month > MONTHS_IN_YEAR || day <= 0) return false;
 
         if (month == FEBRUARY_MONTH_NUM) {
             if (isLeapYear()) {
