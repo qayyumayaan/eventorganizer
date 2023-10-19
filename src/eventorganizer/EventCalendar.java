@@ -53,4 +53,17 @@ public class EventCalendar {
     public void print() {
         for (int i = 0; i < numEvents; i++) System.out.println(events[i]);
     }
+
+    public void printByDate() {
+        for (int i = 0; i < numEvents; i++) {
+            for (int j = 0; j < numEvents - 1; j++) {
+                if (events[j].compareTo(events[j + 1] > 0)) {
+                    Event temp = events[j];
+                    events[j] = events[j+1];
+                    events[j+1] = temp;
+                }
+            }
+        }
+        print();
+    }
 }
