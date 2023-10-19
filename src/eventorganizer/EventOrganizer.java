@@ -223,4 +223,19 @@ public class EventOrganizer {
         eventCalendar.printByCampus();
         System.out.println("* end of event calendar *");
     }
+
+    private void casePrintByDepartment() {
+        if (params.length != 1) return;
+        if (eventCalendar.getNumEvents() == 0) {
+            System.out.println("Event calendar is empty!");
+            return;
+        }
+        System.out.println("* Event calendar by department *");
+        eventCalendar.printByDepartment();
+        System.out.println("* end of event calendar *");
+    }
+
+
+
+
 }
