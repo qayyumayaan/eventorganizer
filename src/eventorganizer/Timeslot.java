@@ -4,14 +4,14 @@ package eventorganizer;
  *
  * @author Ayaan Qayyum
  */
-public class Timeslot {
+public enum Timeslot {
     /**
      * Enumerated time slots.
      */
 
     MORNING(10, 30),
     AFTERNOON(14,00),
-    EVENING(18.30);
+    EVENING(18,30);
 
     private int hours;
     private int minutes;
