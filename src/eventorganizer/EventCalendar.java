@@ -49,4 +49,8 @@ public class EventCalendar {
         numEvents--;
         return true;
     }
+
+    public void print() {
+        for (int i = 0; i < numEvents; i++) System.out.println(events[i]);
+    }
 }
