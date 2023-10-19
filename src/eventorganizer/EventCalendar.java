@@ -57,7 +57,7 @@ public class EventCalendar {
     public void printByDate() {
         for (int i = 0; i < numEvents; i++) {
             for (int j = 0; j < numEvents - 1; j++) {
-                if (events[j].compareTo(events[j + 1] > 0)) {
+                if (events[j].compareTo(events[j + 1]) > 0) {
                     Event temp = events[j];
                     events[j] = events[j+1];
                     events[j+1] = temp;
@@ -68,7 +68,28 @@ public class EventCalendar {
     }
 
     public void printByCampus() {
+        for (int i = 0; i < numEvents; i++) {
+            for (int j = 0; j < numEvents - 1; j++) {
+                if (events[j].getLocation().compareTo(events[j + 1].getLocation()) > 0) {
+                    Event temp = events[j];
+                    events[j] = events[j + 1];
+                    events[j + 1] = temp;
+                }
+            }
+        }
+        print();
     }
+
     public void printByDepartment() {
+        for (int i = 0; i < numEvents; i++) {
+            for (int j = 0; j < numEvents - 1; j++) {
+                if (events[j].getContact().getDepartment().compareTo(events[j + 1].getContact().getDepartment()) > 0){
+                    Event temp = events[j];
+                    events[j] = events[j+ 1];
+                    events[j + 1] = temp;
+                }
+            }
+        }
+        print();
     }
 }
