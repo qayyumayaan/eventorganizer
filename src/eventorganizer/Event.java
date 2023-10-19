@@ -45,6 +45,23 @@ public class Event implements Comparable<Event>{
         return this.startTime.compareTo(otherEvent.startTime);
     }
 
+    @Override
+    public String toString() {
+        StringBuilder sb = new StringBuilder();
+        sb.append("[Event Date: ").append(getDate().toString()).append("] ");
+
+        sb.append("[Start: ").append(getStartTime().toString()).append("] ");
+
+        sb.append("[End: ").append(getEndTime()).append("] ");
+
+        sb.append("@").append(getLocation().name()).append(" (");
+
+        sb.append(getLocation().getBuildingName()).append(", ").append(getLocation().getCampus()).append(") ");
+
+        sb.append("[Contact: ").append(getContact().getDepartment()).append(", ").append(getContact().getEmail()).append("]");
+
+        return sb.toString();
+    }
 
     public Date getDate() {
         return this.date;
