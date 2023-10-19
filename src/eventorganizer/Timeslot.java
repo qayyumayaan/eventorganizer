@@ -78,4 +78,21 @@ public enum Timeslot {
         else return String.format("%d:%02dpm", endHours > NOON ? endHours - 12 : endHours, endMinutes);
     }
 
+    public String getEnd(int duration) {
+        int totalMinutes = this.hours * MINUTES_PER_HOUR + this.minutes + duration;
+        int endHours = totalMinutes / MINUTES_PER_HOUR;
+        int endMinutes = totalMinutes % MINUTES_PER_HOUR;
+
+        if (endHours >= 24) endHours -= 24;
+
+        if (endHours < NOON) {
+            return String.format("%d:%02dam", endHours, endMinutes);
+        } else if (endHours == NOON) {
+            return String.format("%d:%02dpm", endHours, endMinutes);
+        } else {
+            return String.format("%d:%02dpm", endHours > NOON ? endHours - 12 : endHours, endMinutes);
+        }
+    }
+
+
 }
