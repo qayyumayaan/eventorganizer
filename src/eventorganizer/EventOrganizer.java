@@ -163,4 +163,14 @@ public class EventOrganizer {
         }
     }
 
+
+    private boolean departmentIsValid(String departmentString) {
+        try {
+            department = Department.valueOf(departmentString);
+            return true;
+        } catch (IllegalArgumentException e) {
+            System.out.println("Invalid contact information!");
+            return false;
+        }
+    }
 }
