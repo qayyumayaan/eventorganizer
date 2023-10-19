@@ -113,4 +113,33 @@ public class EventOrganizer {
         }
         return count == 2;
     }
+
+    private boolean dateIsValid(String dateString) {
+
+        try {
+            if (dateChecker(dateString)) {
+                System.out.println(date + ": Invalid calendar date!");
+                return false;
+            }
+
+            date = new Date(dateString);
+
+            if (!date.isValid()) {
+                System.out.println(date + ": Invalid calendar date!");
+                return false;
+            }
+            if (!date.isTodayOrFuture()) {
+                System.out.println(date + ": Event date must be a future date!");
+                return false;
+            }
+            if (!date.isWithinSixMonths()) {
+                System.out.println(date + ": Event date must be within 6 months!");
+                return false;
+            }
+            return true;
+        } catch (NumberFormatException e) {
+            System.out.println(dateString + ": Invalid calendar date!");
+            return false;
+        }
+    }
 }
