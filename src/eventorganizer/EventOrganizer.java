@@ -173,4 +173,22 @@ public class EventOrganizer {
             return false;
         }
     }
+
+
+    private boolean durationIsValid(String durationString) {
+        try {
+            duration = Integer.parseInt(durationString);
+            if (duration < 30 || duration > 120) {
+                System.out.println("Event duration must be at least 30 minutes and at most 120 minutes");
+                return false;
+            }
+            return true;
+        } catch (NumberFormatException e) {
+            System.out.println("Event duration must be at least 30 minutes and at most 120 minutes");
+            return false;
+        }
+    }
+
+
+
 }
