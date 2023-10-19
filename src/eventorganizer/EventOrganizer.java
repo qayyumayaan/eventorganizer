@@ -153,4 +153,14 @@ public class EventOrganizer {
         }
     }
 
+    private boolean locationIsValid(String locationString) {
+        try {
+            location = Location.valueOf(locationString);
+            return true;
+        } catch (IllegalArgumentException e) {
+            System.out.println("Invalid location!");
+            return false;
+        }
+    }
+
 }
