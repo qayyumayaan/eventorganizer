@@ -32,5 +32,6 @@ public class EventCalendar {
         events = eventsNew;
     }
 
+    public boolean contains(Event event) { return find(event) != NOT_FOUND;}
 
 }
