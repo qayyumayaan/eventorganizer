@@ -41,4 +41,41 @@ public class EventOrganizer {
             }
         }
     }
+
+
+    /**
+     * Handles command A.
+     * @author Ayaan Qayyum
+     */
+    public void caseAdd() {
+        if (params.length != 7) return;
+
+        String dateString = params[1];
+        String startTimeString = params[2].toUpperCase();
+        String locationString = params[3].toUpperCase();
+        String departmentString = params[4].toUpperCase();
+        String email = params[5];
+        String durationString = params[6];
+
+        if (!dateIsValid(dateString)) return;
+        if (!startTimeIsValid(startTimeString)) return;
+        if (!locationIsValid(locationString)) return;
+        if (!departmentIsValid(departmentString)) return;
+
+
+        Contact contact = new Contact(department, email);
+        if (!contact.isValid()) {
+            System.out.println("Invalid contact information!");
+            return;
+        }
+        int duration = 0;
+        if (!durationIsValid(durationString)) return;
+
+        Event event = new Event(date, startTime, location, contact, duration);
+        if (eventCalendar.add(event)) {
+            System.out.println("Event added to the calendar.");
+        } else {
+            System.out.println("The event is already on the calendar.");
+        }
+    }
 }
