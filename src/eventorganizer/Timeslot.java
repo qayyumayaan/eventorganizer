@@ -58,7 +58,7 @@ public enum Timeslot {
     public String toString() {
         if (hours < NOON) return String.format("%d:%02dam", hours, minutes);
         else if (hours == NOON) return String.format("%d:%02dpm", hours, minutes);
-        else return String.format("%d:%02dpm", hours, 12, minutes);
+        else return String.format("%d:%02dpm", hours > NOON ? hours - 12 : hours, minutes);
     }
 
     /**
@@ -75,7 +75,7 @@ public enum Timeslot {
 
         if (endHours < NOON) return String.format("%d:%02dam", endHours, endMinutes);
         else if (endHours == NOON) return String.format("%d:%02dpm", endHours, endMinutes);
-        else return String.format("%d:%02dpm", endHours, 12, endMinutes);
+        else return String.format("%d:%02dpm", endHours > NOON ? endHours - 12 : endHours, endMinutes);
     }
 
 }
