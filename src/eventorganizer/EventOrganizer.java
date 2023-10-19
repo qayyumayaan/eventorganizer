@@ -68,7 +68,7 @@ public class EventOrganizer {
             System.out.println("Invalid contact information!");
             return;
         }
-        int duration = 0;
+        duration = 0;
         if (!durationIsValid(durationString)) return;
 
         Event event = new Event(date, startTime, location, contact, duration);
