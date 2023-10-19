@@ -24,5 +24,13 @@ public class EventCalendar {
         return NOT_FOUND;
     }
 
+    private void grow() {
+        Event[] eventsNew = new Event[events.length + GROW_SIZE];
+        for (int i = 0; i < events.length; i++) {
+            eventsNew[i] = events[i];
+        }
+        events = eventsNew;
+    }
+
 
 }
