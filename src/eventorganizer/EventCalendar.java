@@ -40,4 +40,13 @@ public class EventCalendar {
         events[numEvents++] = event;
         return true;
     }
+
+    public boolean remove(Event event) {
+        if (!contains(event)) return false;
+        int index = find(event);
+        for (int i = index; i < events.length - 1; i++) events[i] = events[i + 1];
+        events[events.length - 1] = null;
+        numEvents--;
+        return true;
+    }
 }
