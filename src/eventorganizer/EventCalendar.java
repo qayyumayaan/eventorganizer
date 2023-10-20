@@ -32,7 +32,7 @@ public class EventCalendar {
         events = eventsNew;
     }
 
-    public boolean contains(Event event) { return find(event) != NOT_FOUND;}
+    public boolean contains(Event event) { return find(event) != NOT_FOUND; }
 
     public boolean add(Event event) {
         if (contains(event)) return false;
