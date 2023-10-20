@@ -5,8 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="84b78cfb-4773-4a81-a503-5e04817346f3" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/eventorganizer/Department.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/eventorganizer/Department.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/eventorganizer/Event.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/eventorganizer/Event.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/eventorganizer/EventOrganizer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/eventorganizer/EventOrganizer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/eventorganizer/EventCalendar.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/eventorganizer/EventCalendar.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/eventorganizer/Location.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/eventorganizer/Location.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/eventorganizer/Timeslot.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/eventorganizer/Timeslot.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -38,7 +42,8 @@
   "keyToString": {
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "master"
+    "git-widget-placeholder": "master",
+    "settings.editor.selected.configurable": "preferences.lookFeel"
   }
 }]]></component>
   <component name="RunManager">
@@ -67,7 +72,7 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/eventorganizer/EventOrganizer.java</url>
-          <line>43</line>
+          <line>44</line>
           <option name="timeStamp" value="2" />
         </line-breakpoint>
       </breakpoints>
