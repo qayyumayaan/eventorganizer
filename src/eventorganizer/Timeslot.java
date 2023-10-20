@@ -27,7 +27,7 @@ public enum Timeslot {
      * @param minutes The starting minute.
      * @author Ayaan Qayyum
      */
-    private Timeslot(int hours, int minutes) {
+    Timeslot(int hours, int minutes) {
         this.hours = hours;
         this.minutes = minutes;
     }
