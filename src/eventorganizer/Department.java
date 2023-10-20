@@ -39,7 +39,7 @@ public enum Department {
      * @param name The full name of the department.
      * @author Ayaan Qayyum
      */
-    private Department(String name) {this.name = name;}
+    Department(String name) {this.name = name;}
 
     /**
      * Gets the name of the department.
