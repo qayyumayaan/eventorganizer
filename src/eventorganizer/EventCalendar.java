@@ -68,6 +68,12 @@ public class EventCalendar {
     }
 
     public void printByCampus() {
+
+                }
+            }
+        }
+
+            for (int j = 0; j < numEvents - 1; j++) {
         for (int i = 0; i < numEvents; i++) {
             for (int j = 0; j < numEvents - 1; j++) {
                 if (events[j].getLocation().compareTo(events[j + 1].getLocation()) > 0) {

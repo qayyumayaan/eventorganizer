@@ -74,5 +74,7 @@ public class Event implements Comparable<Event>{
 
     public String getEndTime() { return this.startTime.getEnd(duration); }
 
+    public Department getDepartment() { return this.getContact().getDepartment(); }
+
 
 }
