@@ -4,9 +4,9 @@ package eventorganizer;
  */
 public class Event implements Comparable<Event>{
     // Ayaan
-    private Date date;
-    private Timeslot startTime;
-    private Location location;
+    private final Date date;
+    private final Timeslot startTime;
+    private final Location location;
     private Contact contact;
     private int duration;
 
