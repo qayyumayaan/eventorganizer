@@ -28,9 +28,8 @@ public class Event implements Comparable<Event>{
     public boolean equals(Object obj) {
         if (this == obj) return true;
         if (obj == null) return false;
-        if (!(obj instanceof Event)) return false;
+        if (!(obj instanceof Event event)) return false;
 
-        Event event = (Event) obj;
         return date.equals(event.date) &&
                 startTime.equals(event.startTime) &&
                 location.equals(event.location);
@@ -47,20 +46,14 @@ public class Event implements Comparable<Event>{
 
     @Override
     public String toString() {
-        StringBuilder sb = new StringBuilder();
-        sb.append("[Event Date: ").append(getDate().toString()).append("] ");
 
-        sb.append("[Start: ").append(getStartTime().toString()).append("] ");
+        return "[Event Date: " + getDate().toString() + "] " +
+                "[Start: " + getStartTime().toString() + "] " +
+                "[End: " + getEndTime() + "] " +
+                "@" + getLocation().name() + " (" +
+                getLocation().getBuildingName() + ", " + getLocation().getCampus() + ") " +
+                "[Contact: " + getContact().getDepartment() + ", " + getContact().getEmail() + "]";
 
-        sb.append("[End: ").append(getEndTime()).append("] ");
-
-        sb.append("@").append(getLocation().name()).append(" (");
-
-        sb.append(getLocation().getBuildingName()).append(", ").append(getLocation().getCampus()).append(") ");
-
-        sb.append("[Contact: ").append(getContact().getDepartment()).append(", ").append(getContact().getEmail()).append("]");
-
-        return sb.toString();
     }
 
     public Date getDate() {
