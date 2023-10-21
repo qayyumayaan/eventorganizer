@@ -120,7 +120,7 @@ public class EventCalendar {
     }
 
     /**
-     * Prints Events sorted by campus.
+     * Prints Events sorted by campus and building and room.
      * @author Ayaan Qayyum
      */
     public void printByCampus() {
@@ -158,6 +158,10 @@ public class EventCalendar {
         print();
     }
 
+    /**
+     * Prints Events sorted by department.
+     * @author Ayaan Qayyum
+     */
     public void printByDepartment() {
         for (int i = 0; i < numEvents - 1; i++) {
             for (int j = 0; j < numEvents - i - 1; j++) {
