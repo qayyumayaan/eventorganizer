@@ -63,7 +63,7 @@ public class Event implements Comparable<Event> {
 
     /**
      * Compares this event with another event.
-     * @param otherEvent Event to compare to
+     * @param obj Event to compare to
      * @return Comparison result
      * @author Ayaan Qayyum
      */
@@ -80,7 +80,7 @@ public class Event implements Comparable<Event> {
 
     /**
      * Checks if this event is equal to another object.
-     * @param obj Object to compare to
+     * @param otherEvent Object to compare to
      * @return true if equal, false otherwise
      * @author Ayaan Qayyum
      */
@@ -162,5 +162,51 @@ public class Event implements Comparable<Event> {
      */
     public Department getDepartment() {
         return this.getContact().getDepartment();
+    }
+
+    public static void main(String[] args) {
+        // Test Data
+        Date date1 = new Date("11/15/2023");
+        Date date2 = new Date("11/16/2023");
+        Timeslot time1 = Timeslot.MORNING;
+        Timeslot time2 = Timeslot.AFTERNOON;
+        Location loc1 = Location.BE_AUD;
+        Location loc2 = Location.MU302;
+        Contact contact1 = new Contact(Department.CS, "cs@rutgers.edu");
+        Contact contact2 = new Contact(Department.EE, "ee@rutgers.edu");
+
+        // Test Cases
+        Event event1 = new Event(date1, time1, loc1, contact1, 60);
+        Event event2 = new Event(date1, time1, loc1, contact1, 60);
+        Event event3 = new Event(date2, time1, loc1, contact1, 60);
+        Event event4 = new Event(date1, time1, loc1, contact2, 60);
+
+        // Test Case 1
+        System.out.println("**Test case #1: Test for equals() with two identical events.");
+        testResult(event1, true, event1.equals(event2));
+
+        // Test Case 2
+        System.out.println("**Test case #2: Test for equals() with different dates.");
+        testResult(event2, false, event2.equals(event3));
+
+        // Test Case 3
+        System.out.println("**Test case #3: Test for equals() with different times.");
+        testResult(event3, false, event3.equals(event4));
+
+        // Test Case 4
+        System.out.println("**Test case #4: Test for compareTo().");
+        testResult(event4, true, event4.compareTo(event3) < 0);
+
+    }
+
+    /**
+     * Method is used to print out test case results
+     * @author Ayaan Qayyum
+     */
+    private static void testResult(Event item, boolean expectedOutput, boolean actualOutput) {
+        System.out.println("Testing Event: " + item);
+        System.out.println("Expected Output: " + expectedOutput);
+        System.out.println("Actual Output: " + actualOutput);
+        System.out.println(expectedOutput == actualOutput ? "Test Passed!" : "Test Failed!");
     }
 }

@@ -2,7 +2,6 @@ package eventorganizer;
 
 /**
  * Department enum for representing various academic departments.
- *
  * @author Ayaan Qayyum
  */
 public enum Department {

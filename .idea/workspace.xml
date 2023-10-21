@@ -9,8 +9,6 @@
       <change beforePath="$PROJECT_DIR$/src/eventorganizer/Department.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/eventorganizer/Department.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/eventorganizer/Event.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/eventorganizer/Event.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/eventorganizer/EventCalendar.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/eventorganizer/EventCalendar.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/eventorganizer/Location.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/eventorganizer/Location.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/eventorganizer/Timeslot.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/eventorganizer/Timeslot.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -66,16 +64,5 @@
       <updated>1697719661567</updated>
     </task>
     <servers />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/eventorganizer/EventOrganizer.java</url>
-          <line>44</line>
-          <option name="timeStamp" value="2" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
   </component>
 </project>

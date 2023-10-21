@@ -98,6 +98,22 @@ public class EventCalendar {
         return true;
     }
 
+//    public void print(Event[] eventsCopy) {
+//        for (int i = 0; i < numEvents; i++) System.out.println(eventsCopy[i]);
+//    }
+
+//    public Event[] copyEvents() {
+//        Event[] eventsCopy = new Event[numEvents];
+//        for (int i = 0; i < numEvents; i++) {
+//            eventsCopy[i] = events[i];
+//        }
+//        return eventsCopy;
+//    }
+
+    /**
+     * Prints all Events.
+     * @author Ayaan Qayyum
+     */
     public void print() {
         for (int i = 0; i < numEvents; i++) System.out.println(events[i]);
     }
