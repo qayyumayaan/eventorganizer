@@ -3,6 +3,7 @@ package eventorganizer;
 import java.util.Calendar;
 
 /**
+ * Implements the Date item and operator for the Event scheduling program.
  * @author Ayaan Qayyum
  */
 
@@ -174,7 +175,10 @@ public class Date implements Comparable<Date>{
     }
 
 
-
+    /**
+     * Runs the seven test cases for Date.
+     * @param args
+     */
     public static void main(String[] args) {
         testDaysInFeb_NonLeap();
         testDaysInFeb_Leap();
