@@ -127,19 +127,16 @@ public class EventCalendar {
 
         for (int i = 0; i < numEvents; i++) {
             for (int j = 0; j < numEvents - 1; j++) {
-                if (events[j].getDate().compareTo(events[j + 1].getDate()) > 0) {
+                if (events[j].getDate().equals(events[j + 1].getDate())) {
                     Event temp = events[j];
-                    events[j] = events[j+1];
-                    events[j+1] = temp;
+                    events[j] = events[j + 1];
+                    events[j + 1] = temp;
                 }
             }
         }
-
         for (int i = 0; i < numEvents; i++) {
             for (int j = 0; j < numEvents - 1; j++) {
-        for (int i = 0; i < numEvents; i++) {
-            for (int j = 0; j < numEvents - 1; j++) {
-                if (events[j].getLocation().compareTo(events[j + 1].getLocation()) > 0) {
+                if (events[j].getLocation().getCampus().compareTo(events[j + 1].getLocation().getCampus()) > 0) {
                     Event temp = events[j];
                     events[j] = events[j + 1];
                     events[j + 1] = temp;
@@ -147,7 +144,16 @@ public class EventCalendar {
             }
         }
 
-
+        for (int i = 0; i < numEvents; i++) {
+            for (int j = 0; j < numEvents - 1; j++) {
+                if (events[j].getLocation().getCampus().equals(events[j + 1].getLocation().getCampus()) &&
+                        events[j].getLocation().getBuildingName().compareTo(events[j + 1].getLocation().getBuildingName()) > 0) {
+                    Event temp = events[j];
+                    events[j] = events[j + 1];
+                    events[j + 1] = temp;
+                }
+            }
+        }
 
         print();
     }
