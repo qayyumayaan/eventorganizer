@@ -2,18 +2,19 @@ package eventorganizer;
 
 /**
  * Represents a contact associated with an event, including department and email details.
- *
  * @author Ayaan Qayyum
  */
 public class Contact {
 
     /**
      * The department associated with the contact.
+     * @author Ayaan Qayyum
      */
     private Department department;
 
     /**
      * The email of the contact.
+     * @author Ayaan Qayyum
      */
     private String email;
 
@@ -22,6 +23,7 @@ public class Contact {
      *
      * @param department The department associated with the contact
      * @param email      The email of the contact
+     * @author Ayaan Qayyum
      */
     public Contact(Department department, String email) {
         super();
@@ -31,8 +33,8 @@ public class Contact {
 
     /**
      * Gets the department associated with the contact.
-     *
      * @return The department
+     * @author Ayaan Qayyum
      */
     public Department getDepartment() {
         return department;
@@ -40,8 +42,8 @@ public class Contact {
 
     /**
      * Gets the email of the contact.
-     *
      * @return The email
+     * @author Ayaan Qayyum
      */
     public String getEmail() {
         return email;
@@ -49,8 +51,8 @@ public class Contact {
 
     /**
      * Validates the email and department.
-     *
      * @return true if valid, false otherwise
+     * @author Ayaan Qayyum
      */
     public boolean isValid() {
         if (department == null) return false;
@@ -63,8 +65,8 @@ public class Contact {
 
     /**
      * Returns the string representation of the contact.
-     *
      * @return A string containing the department and email
+     * @author Ayaan Qayyum
      */
     @Override
     public String toString() { return department + ", " + email; }
